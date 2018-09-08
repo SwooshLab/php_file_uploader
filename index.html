@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+    body {
+        background: linear-gradient(45deg, blue, aqua);
+    }
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: monospace;
+    font-size: 1.6em;
+    color: white;
+}
+</style>
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Select file to upload:
+    <input type="file" name="file">
+    <input type="submit" value="Upload File" name="submit">
+</form>
+
+</body>
+</html>
