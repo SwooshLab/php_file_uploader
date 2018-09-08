@@ -13,7 +13,7 @@ $fileType = $_FILES['file']['type'];
 $magicStr = "loremIpsum";
 $encryptedFileName = md5(basename($fileName) . $magicStr . date('D, d M Y H:i:s')) . "." . $fileExt;
 $parentDirLink = str_replace($_SERVER['DOCUMENT_ROOT'], "", dirname($_SERVER['REQUEST_URI']));
-$actualLink = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$parentDirLink/bucket/" . $encryptedFileName;
+$actualLink = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$parentDirLink$uploadDirectory" . $encryptedFileName;
 
 $uploadPath = $currentDir . $uploadDirectory . $encryptedFileName; 
 
